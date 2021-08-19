@@ -13,7 +13,7 @@
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
-                <i class='bx bxl-c-plus-plus'></i>
+                <i class='bx bxl-c-plus-plus' id="btnCompany"></i>
                 <div class="logo_name">CodingLab</div>
             </div>
             <i class='bx bx-menu' id="btn"></i>
@@ -102,15 +102,21 @@
 
     <script>
         let btn = document.querySelector("#btn");
+        let logoCompany = document.querySelector("#btnCompany");
         let sidebar = document.querySelector(".sidebar");
         let searchBtn = document.querySelector(".bx-search");
 
+
         btn.onclick = function(){
+            sidebar.classList.toggle("active");
+        }
+        logoCompany.onclick = function(){
             sidebar.classList.toggle("active");
         }
         searchBtn.onclick = function(){
             sidebar.classList.toggle("active");
         }
+
     </script>
 </body>
 </html>
